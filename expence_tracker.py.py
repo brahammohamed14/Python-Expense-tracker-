@@ -17,6 +17,25 @@ def show_expenses():
 def show_total():
      total = sum(item["amount"] for item in expenses)
      print(f"Total : {total:.2f}")
+<<<<<<< HEAD
+def show_average():
+  if not expenses:
+    print("No expenses recorded.")
+    return
+  total = sum(item["amount"] for item in expenses)
+  average = total / len(expenses)
+  print(f"Average expense: {average:.2f}")
+def main():
+   while True:
+    print("\n===== SUIVI DES DEPENSES =====")
+    print("1. Ajouter une depense")
+    print("2. Afficher les depenses")
+    print("3. Afficher le total")
+    print("4. afficher average")
+    print("5. Quitter")
+    choice = input("Votre choix : ")
+    if choice == "1":
+=======
 def delete_expense():
    if not expenses:
       print("No expenses to delete.")
@@ -43,11 +62,22 @@ def main():
       print("5. Quitter")
       choice = input("Votre choix : ")
       if choice == "1":
+>>>>>>> main
        add_expense()
       elif choice == "2":
        show_expenses()
       elif choice == "3":
        show_total()
+<<<<<<< HEAD
+    elif choice =="4":
+      show_average()
+       
+    elif choice == "5":
+      print("Au revoir !")
+      break 
+    else:
+        print("Choix invalide.")
+=======
       elif choice == "4":
        delete_expense()
       elif choice == "5":
@@ -55,5 +85,6 @@ def main():
          break 
       else:
          print("Choix invalide.")
+>>>>>>> main
 if __name__ == "__main__":
    main()
